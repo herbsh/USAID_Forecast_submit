@@ -93,10 +93,46 @@ The emsemble part estimate another model to take inputs (F1..F4, and features X)
     - for final prediction(contained 3 last month exog vars and space holder) '../0_data/df_combined_fullsample.csv'
 
 
-## Step 2: Multiple Agg-Forecast-Distribute Models in parallel  
+## Step 2: Multiple Agg-Forecast-Distribute Models in parallel 
+
 - notebook: model_SARIMAX_Distribute_region.ipynb 
+    - input: 
+        - '../0_data/df_combined_fullsample.csv' 
+    - output:
+        1. ../2_pipeline/final_pred_region_lev.csv
+        2. ./2_pipeline/final_distribute_regionlev.csv'
+        
+- notebook: model_SARIMAX_Distribute_District.ipynb
+     - input: 
+          - '../0_data/df_combined_fullsample.csv' 
+     - output::
+        1. '../2_pipeline/final_pred_district_lev.csv'
+        2. '../2_pipeline/final_distribute_districtlev.csv'
+        
+- notebook: model_SARIMAX_Distribute_regionproducttype.ipynb
+     - input: 
+          - '../0_data/df_combined_fullsample.csv'
+     - output: 
+        1. ../2_pipeline/final_pred_region_producttype_lev.csv
+        2. '../2_pipeline/final_distribute_regionproducttypelev.csv'
+        
+- notebook: model_SARIMAX_individual.ipyn
+     - input: 
+        - '../0_data/df_combined_fullsample.csv'
+     - output: 
+        - '../2_pipeline/final_pred_ind_lev.csv'
 
-- 
-
+- notebok: model_SARIMAX_idividual_winsorized.ipynb
+     - input: 
+        - '../0_data/df_combined_fullsample.csv'
+     - output: 
+        - '../2_pipeline/final_pred_ind_winsorized_lev.csv'
+- notebook: model_SARIMAX_individual_rollingsmoothed.ipynb 
+     - input: 
+        - '../0_data/df_combined_fullsample.csv'
+     - output: 
+        - '../2_pipeline/final_pred_ind_rollingsmoothed_lev.csv' 
+        
+        
 ## Step 3: Ensemble, learn the ensemble model, make final prediction 
 
