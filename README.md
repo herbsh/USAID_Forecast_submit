@@ -135,7 +135,7 @@ The emsemble part estimate another model to take inputs (F1..F4, and features X)
         
         
 ## Step 3: Ensemble, learn the ensemble model, make final prediction 
-- notebook: ensemble.ipynb 
+- notebook: ensemble.ipynb (1_code/ensemble.ipynb) 
     - input: 
         - Distribution model results: glob.glob('../2_pipeline/final_distribute_*.csv') 
         - SARIMAX results: glob.glob('../2_pipeline/final_pred_ind*.csv') 
