@@ -122,7 +122,7 @@ The emsemble part estimate another model to take inputs (F1..F4, and features X)
      - output: 
         - '../2_pipeline/final_pred_ind_lev.csv'
 
-- notebok: model_SARIMAX_idividual_winsorized.ipynb
+- notebook: model_SARIMAX_idividual_winsorized.ipynb
      - input: 
         - '../0_data/df_combined_fullsample.csv'
      - output: 
@@ -135,4 +135,9 @@ The emsemble part estimate another model to take inputs (F1..F4, and features X)
         
         
 ## Step 3: Ensemble, learn the ensemble model, make final prediction 
-
+- notebook: ensemble.ipynb 
+    - input: 
+        - Distribution model results: glob.glob('../2_pipeline/final_distribute_*.csv') 
+        - SARIMAX results: glob.glob('../2_pipeline/final_pred_ind*.csv') 
+    - output: 
+ 
